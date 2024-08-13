@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangalore Home Price Prediction</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="app.css">
+</head>  
+<body>
+    <div class="container">
+        <div class="img"></div> 
+
+        <div><h1>Bangalore House Price Predictor</h1></div>
+
+        <form class="form">
+            <h2>Area (square ft)</h2>
+            <input type="number" name="Squareft" id="uiSqft" step="0.00001" placeholder="Enter square footage">
+
+            <h2>BHK</h2>
+            <div class="switch-field">
+                <input type="radio" name="uibhk" id="bhk1" value="1">
+                <label for="bhk1">1</label>
+                <input type="radio" name="uibhk" id="bhk2" value="2">
+                <label for="bhk2">2</label>
+                <input type="radio" name="uibhk" id="bhk3" value="3">
+                <label for="bhk3">3</label>
+                <input type="radio" name="uibhk" id="bhk4" value="4">
+                <label for="bhk4">4</label>
+                <input type="radio" name="uibhk" id="bhk5" value="5">
+                <label for="bhk5">5</label>
+                <input type="radio" name="uibhk" id="bhk6" value="6">
+                <label for="bhk6">6</label>
+            </div>
+        </form>
+
+        <form class="form">
+            <h2>Number of Bathrooms</h2>
+            <div class="switch-field">
+                <input type="radio" name="uibath" id="bath1" value="1">
+                <label for="bath1">1</label>
+                <input type="radio" name="uibath" id="bath2" value="2">
+                <label for="bath2">2</label>
+                <input type="radio" name="uibath" id="bath3" value="3">
+                <label for="bath3">3</label>
+                <input type="radio" name="uibath" id="bath4" value="4">
+                <label for="bath4">4</label>
+                <input type="radio" name="uibath" id="bath5" value="5">
+                <label for="bath5">5</label>
+                <input type="radio" name="uibath" id="bath6" value="6">
+                <label for="bath6">6</label>
+            </div>
+        </form>  
+  
+        <div class="form">
+            <h2>Location</h2>
+            <select class="location" name="loc" id="uiLocations">
+                <option value="" disabled selected>Choose a location</option>
+            </select>
+
+            <button type="button" onclick="onClickedEstimatePrice()">Estimate Price</button>
+            <div id="uiEstimatedPrice" class="result"></div>
+        </div>
+    </div>
+</body>
+</html>
